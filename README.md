@@ -20,6 +20,7 @@ Levels can be found in the level/ directory.
 - down: Applies a downward force to the ball.
 - up: Negates the effect of gravity.
 - backspace: Resets the level.
+- escape or q: Quits the game.
 
 ## Designing a Level
 

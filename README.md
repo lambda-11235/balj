@@ -4,7 +4,7 @@
 Balj is a platformer where one plays as a bouncing ball, with the added bonus
 of antigravity. The goal of the game is to reach a green square without touching
 any red squares. This game is ran from the command line. It uses the
-(LÖVE)[https://love2d.org/] game engine. To run the game enter the following at
+[LÖVE](https://love2d.org/) game engine. To run the game enter the following at
 the command line.
 
 ```

@@ -104,17 +104,23 @@ function love.draw()
   end
 
   if lost then
-    love.graphics.setColor(255, 255, 0)
-    love.graphics.print('You Lost!', width/2, height/2)
+    love.graphics.setColor(255, 100, 100)
+    center_print('You Lost!', width/2, height/2)
   elseif won then
-    love.graphics.setColor(255, 255, 0)
-    love.graphics.print('You Won!', width/2, height/2)
+    love.graphics.setColor(100, 255, 100)
+    center_print('You Won!', width/2, height/2)
   end
 
-  local minutes, seconds = math.floor(time/60), math.floor(time%60)
-  local time_str = string.format("%02d:%02d", minutes, seconds)
+  local minutes, seconds = math.floor(time/60), time%60
+  local time_str = string.format("%02d:%05.2f", minutes, seconds)
   love.graphics.setColor(255, 255, 255)
   love.graphics.print(time_str, 0, 0)
+end
+
+
+function center_print(s, x, y)
+  love.graphics.print(s, x - love.graphics.getFont():getWidth(s)/2,
+                         y - love.graphics.getFont():getHeight(s)/2)
 end
 
 
